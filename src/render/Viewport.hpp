@@ -11,5 +11,5 @@ enum class ViewportMode {
 
 struct ViewportLayout {
     ViewportMode mode = ViewportMode::Four;
-    std::vector<Rect> computerRects(int fbW, int fbH) const;
+    std::vector<Rect> computeRects(int fbW, int fbH) const;
 };
