@@ -1,0 +1,11 @@
+*.elf
+*.exe
+*.out
+*.o
+*.obj
+ignore_*.txt
+target/
+target/*
+compiled/
+compiled/*
+*.json
