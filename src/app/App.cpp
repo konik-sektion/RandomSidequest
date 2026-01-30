@@ -38,7 +38,7 @@ bool App::init() {
     return true;
 }
 
-void run() {
+bool App::run() {
     const int gridW = 512, gridH = 256;
 
     RasterLayer raster(gridW, gridH, "assets/shaders/blit.vert", "assets/shaders/scalar.frag");
@@ -63,7 +63,6 @@ void run() {
 
         if (ui.playing) t += 0.016f;
 
-        // Dummy scalar field (you’ll swap this with real gridded data later)
         for (int y = 0; y < gridH; ++y) {
             for (int x = 0; x < gridW; ++x) {
                 float fx = float(x) / float(gridW);
@@ -96,11 +95,12 @@ void run() {
         ui_draw(ui);
         ui_end();
 
-        // Clamp sanity
         ui.vmax = std::max(ui.vmax, ui.vmin + 1e-6f);
 
         glfwSwapBuffers(window_);
     }
+
+    return true;
 }
 
 void App::shutdown() {
