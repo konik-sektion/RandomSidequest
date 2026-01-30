@@ -101,7 +101,6 @@ void run() {
 
         glfwSwapBuffers(window_);
     }
-    return true;
 }
 
 void App::shutdown() {
