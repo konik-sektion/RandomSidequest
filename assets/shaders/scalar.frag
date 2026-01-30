@@ -13,7 +13,7 @@ void main() {
     float t = (v - uVmin) / max(uVmax - uVmin, 1e-6);
     t = clamp(t, 0.0, 1.0);
 
-    vec4 c = texture(uLut, t);
+    vec4 c = texture(uLut, vec2(t, 0.5));
     c.a *= uAlpha;
 
     FragColor = c;
