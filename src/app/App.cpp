@@ -41,8 +41,9 @@ bool App::init() {
 bool App::run() {
     const int gridW = 512, gridH = 256;
 
-    RasterLayer raster(gridW, gridH, "assets/shaders/blit.vert", "assets/shaders/scalar.frag");
-    raster.buildDefaultColormap();
+    std::string vs = std::string(METEO_ASSETS_DIR) + "/shaders/blit.vert";
+    std::string fs = std::string(METEO_ASSETS_DIR) + "/shaders/scalar.frag";
+    RasterLayer raster(gridW, gridH, vs, fs);
 
     ViewportLayout layout;
     layout.mode = ViewportMode::Four;

@@ -44,6 +44,8 @@ if(UNIX AND NOT APPLE)
     target_link_libraries(meteo PRIVATE dl pthread)
 endif()
 
+target_compile_definitions(meteo PRIVATE METEO_ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets")
+
 add_custom_command(TARGET meteo POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E make_directory $<TARGET_FILE_DIR:meteo>/assets/shaders
     COMMAND ${CMAKE_COMMAND} -E copy_directory
