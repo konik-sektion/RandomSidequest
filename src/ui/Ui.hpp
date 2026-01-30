@@ -1,3 +1,5 @@
+#define GLFW_INCLUDE_NONE
+
 #pragma once
 #include <GLFW/glfw3.h>
 #include "../render/Viewport.hpp"

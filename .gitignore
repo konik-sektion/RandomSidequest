@@ -4,8 +4,10 @@
 *.o
 *.obj
 ignore_*.txt
-target/
-target/*
-compiled/
-compiled/*
+build/
+build/*
 *.json
+venv/*
+venv/
+extern/glad/*
+extern/imgui/*

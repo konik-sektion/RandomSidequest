@@ -1,3 +1,5 @@
+#define GLFW_INCLUDE_NONE
+
 #include "Ui.hpp"
 
 #include <imgui.h>

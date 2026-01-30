@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(glfw3 REQUIRED)
 
 add_library(glad STATIC extern/glad/src/glad.c)
-target_include_directory(glad PUBLIC extern/glad/include)
+target_include_directories(glad PUBLIC extern/glad/include)
 
 add_library(imgui STATIC
     extern/imgui/imgui.cpp
@@ -32,7 +32,7 @@ add_executable(meteo
     src/render/Texture2D.cpp
     src/render/Quad.cpp
     src/render/Viewport.cpp
-    src/render/RasterLayout.cpp
+    src/render/RasterLayer.cpp
     src/ui/Ui.cpp
 )
 

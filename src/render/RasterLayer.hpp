@@ -6,7 +6,7 @@
 
 class RasterLayer {
     public:
-        RasterLayer(int w, int h, const::string& vs, const std::string& fs);
+        RasterLayer(int w, int h, const std::string& vs, const std::string& fs);
 
         void uploadScalar(const float* data);
         void buildDefautlColormap();

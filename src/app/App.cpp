@@ -1,3 +1,5 @@
+#define GLFW_INCLUDE_NONE
+
 #include "App.hpp"
 
 #include <cstdio>
@@ -36,7 +38,7 @@ bool App::init() {
     return true;
 }
 
-void App::run() {
+void run() {
     const int gridW = 512, gridH = 256;
 
     RasterLayer raster(gridW, gridH, "assets/shaders/blit.vert", "assets/shaders/scalar.frag");
